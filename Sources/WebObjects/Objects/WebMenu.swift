@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import FeatherApi
+import FeatherObjects
 
 public extension Web {
-    enum Menu: FeatherApiModel {
+    enum Menu: FeatherObjectModel {
         public typealias Module = Web
     }
 }

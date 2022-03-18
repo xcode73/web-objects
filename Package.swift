@@ -2,19 +2,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "web-api",
+    name: "web-objects",
     platforms: [
-       .macOS(.v12)
+       .macOS(.v10_15)
     ],
     products: [
-        .library(name: "WebApi", targets: ["WebApi"]),
+        .library(name: "WebObjects", targets: ["WebObjects"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/feathercms/feather-api", .branch("main")),
+        .package(url: "https://github.com/feathercms/feather-objects", .branch("main")),
     ],
     targets: [
-        .target(name: "WebApi", dependencies: [
-            .product(name: "FeatherApi", package: "feather-api"),
+        .target(name: "WebObjects", dependencies: [
+            .product(name: "FeatherObjects", package: "feather-objects"),
         ]),
     ]
 )

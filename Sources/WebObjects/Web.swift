@@ -6,6 +6,6 @@
 //
 
 import Foundation
-import FeatherApi
+import FeatherObjects
 
-public enum Web: FeatherApiModule {}
+public enum Web: FeatherObjectModule {}
