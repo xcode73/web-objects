@@ -1,20 +1,21 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "web-objects",
     platforms: [
-        .macOS(.v10_15),
+        .macOS(.v10_15)
     ],
     products: [
-        .library(name: "WebObjects", targets: ["WebObjects"]),
+        .library(name: "WebObjects", targets: ["WebObjects"])
     ],
     dependencies: [
-        .package(url: "https://github.com/xcode73/feather-objects", .branch("test-dev")),
+        .package(url: "https://github.com/xcode73/feather-objects", branch: "test-dev")
     ],
     targets: [
         .target(name: "WebObjects", dependencies: [
-            .product(name: "FeatherObjects", package: "feather-objects"),
+            .product(name: "FeatherObjects", package: "feather-objects")
         ]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
